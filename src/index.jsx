@@ -1,6 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import Child from './containers/ChildContainer';
 
-const Index = () => <div>Nice to meet you, my name is app.</div>;
+const App = (props) => {
+  return (
+    <div>
+      <Child />
+    </div>
+  )
+}
 
-ReactDOM.render(<Index />, document.getElementById('index'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+document.getElementById('index'));
