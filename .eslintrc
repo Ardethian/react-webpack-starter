@@ -1,14 +1,21 @@
 {
-  "parser": "babel-eslint",
-  "plugins": [
-    "react"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
-  "env": {
-    "browser": true,
-    "node": true
-  },
+	"parserOptions": {
+		"ecmaVersion": 10,
+		"sourceType": "module"
+	},
+	"plugins": ["prettier"],
+	"env": {
+		"es6": true,
+		"amd": true,
+		"commonjs": true,
+		"node": true,
+		"browser": true
+	},
+	"extends": ["eslint:recommended", "plugin:react/recommended"],
+	"rules": {
+		"no-console": "warn",
+		"prettier/prettier": "warn",
+		"no-unused-vars": "warn",
+		"quotes": [2, "single", "avoid-escape"]
+	}
 }

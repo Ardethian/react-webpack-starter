@@ -4,16 +4,17 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import Child from './containers/ChildContainer';
 
-const App = (props) => {
-  return (
-    <div>
-      <Child />
-    </div>
-  )
-}
+const App = props => {
+	return (
+		<div>
+			<Child />
+		</div>
+	);
+};
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-document.getElementById('index'));
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById('index')
+);
